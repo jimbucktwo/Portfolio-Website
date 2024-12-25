@@ -3,8 +3,9 @@ import { useState, useEffect } from "react";
 import logo from "./logo192.png";
 import intro from "./intro.jpeg";
 import weather from "./weatherlogo.png";
+import {Link} from "react-router-dom"
 
-function Header() {
+export function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
 
   useEffect(() => {
@@ -30,26 +31,28 @@ function Header() {
   return (
     <div className="home">
       <div className="header">
+        <nav>
         <div className="header-name">
-          <a href="#">
+          <Link to="/home">
             <p>Jimmy Tran</p>
-          </a>
+          </Link>
         </div>
         <div className="header-work">
-          <a href="#">
+        <Link to="/work">
             <p>Work</p>
-          </a>
+        </Link>
         </div>
         <div className="header-about">
-          <a href="#">
+        <Link to="/about">
             <p>About</p>
-          </a>
+          </Link>
         </div>
         <div className="header-contact">
-          <a href="#">
+        <Link to="/contact">
             <p>Contact</p>
-          </a>
+          </Link>
         </div>
+        </nav>
       </div>
     </div>
   );
@@ -67,7 +70,7 @@ function Desc() {
             }
           },
           {
-            threshold: 0.1, // Adjust this value as needed
+            threshold: 0.3, // Adjust this value as needed
           }
         );
     
@@ -108,7 +111,7 @@ function Intro() {
         }
       },
       {
-        threshold: 0.1, // Adjust this value as needed
+        threshold: 0.3, // Adjust this value as needed
       }
     );
 
@@ -142,7 +145,7 @@ function Grid() {
             }
           },
           {
-            threshold: 0.1, // Adjust this value as needed
+            threshold: 0.3, // Adjust this value as needed
           }
         );
     
@@ -182,7 +185,7 @@ function Projects() {
             }
           },
           {
-            threshold: 0.1, // Adjust this value as needed
+            threshold: 0.3, // Adjust this value as needed
           }
         );
     
