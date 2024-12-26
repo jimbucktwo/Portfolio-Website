@@ -1,9 +1,13 @@
 import "./Home.css";
 import { useState, useEffect } from "react";
 import logo from "./logo192.png";
-import intro from "./intro.jpeg";
-import weather from "./weatherlogo.png";
-import {Link} from "react-router-dom"
+import intro from "./images/intro.jpeg";
+import weather from "./images/weatherlogo.png";
+import {Link} from "react-router-dom";
+import flappy from "./images/flappy.png";
+import fridge from "./images/fridge.jpeg";
+import holidays from "./images/holidays.jpg";
+import school from "./images/longbeach.jpg";
 
 export function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -134,6 +138,20 @@ function Intro() {
 }
 
 function Grid() {
+    const images = [flappy, fridge, holidays];
+    const desc = ["Flappy Bird", "Virtual IoT Device", "Holiday Tracker" ];
+    const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+      
+      const interval = setInterval(() => {
+          setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
+      }, 3000); // Change image every 3 seconds
+
+      return () => clearInterval(interval);
+  }, [images.length]);
+
+
     useEffect(() => {
         const introElement = document.querySelector(".projects-grid");
         const observer = new IntersectionObserver(
@@ -145,7 +163,7 @@ function Grid() {
             }
           },
           {
-            threshold: 0.3, // Adjust this value as needed
+            threshold: 0.3, 
           }
         );
     
@@ -159,20 +177,23 @@ function Grid() {
           }
         };
       }, []);
+
+      
+
     return (
+      <div className="project-outer">
         <div className="projects-grid">
-        <a href="#">
-          <img src={weather}></img>
-        </a>
-        <a href="#">
-          <img src={weather}></img>
-        </a>
-        <a href="#">
-          <img src={weather}></img>
-        </a>
+        <div className="project">
+          <Link to="/work"><img src={images[currentImage]}></img></Link>
+        </div>
+      </div>
+      <div className="project disc">
+          <p>Projects</p>
+        </div>
       </div>
     )
 }
+
 function Projects() {
     useEffect(() => {
         const introElement = document.querySelector(".projects");
@@ -207,7 +228,7 @@ function Projects() {
   );
 }
 
-function Footer() {
+export function Footer() {
     return (
         <div className="footer">
         <ul className="socialicons">
@@ -240,18 +261,95 @@ function Footer() {
               >&#xeaa7;</a>
           </li>
         </ul>
-            <p>Jimmy Tran   -  Web Developer</p>
+            <p>Jimmy Tran - Web Developer</p>
         </div>
     );
 
 }
 
+function Resume() {
+  useEffect(() => {
+    const introElement = document.querySelector(".resume");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          introElement.classList.add("fade-in");
+        } else {
+          introElement.classList.remove("fade-in");
+        }
+      },
+      {
+        threshold: 0.3, // Adjust this value as needed
+      }
+    );
+
+    if (introElement) {
+      observer.observe(introElement);
+    }
+
+    return () => {
+      if (introElement) {
+        observer.unobserve(introElement);
+      }
+    };
+  }, []);
+
+
+  return(
+    <div className="resume">
+      <div className="resume-desc">
+        <img src={school} alt="California State University, Long Beach"></img>
+        <div className="bio">
+        <p>CSULB Undergrad</p>
+        <p>B.S. in Computer Science, GPA of 3.9 <Link to="/about" className="learn">(Learn More)</Link></p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function Contact() {
+  useEffect(() => {
+    const introElement = document.querySelector(".home-contact");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          introElement.classList.add("fade-in");
+        } else {
+          introElement.classList.remove("fade-in");
+        }
+      },
+      {
+        threshold: 0.3, // Adjust this value as needed
+      }
+    );
+
+    if (introElement) {
+      observer.observe(introElement);
+    }
+
+    return () => {
+      if (introElement) {
+        observer.unobserve(introElement);
+      }
+    };
+  }, []);
+  return (
+    <div className="home-contact">
+        <p>Curious?</p>
+        <p>Connect with me!</p>
+        <div className="contact-link"><Link to="/contact">Email</Link></div>
+    </div>
+  )
+}
 export default function Home() {
   return (
     <div>
       <Header />
       <Intro />
+      <Resume />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   );

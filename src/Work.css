@@ -1,5 +1,5 @@
 .work {
-    background-color: white;
+  background-color: white;
   width: 95%;
   height: 90vh;
   display: flex;
@@ -8,4 +8,12 @@
   border-radius: 20px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateX(-20%);
+}
+
+.work.fade-in {
+  opacity: 1;
+  transform: translateX(0%);
 }
