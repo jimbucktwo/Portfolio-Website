@@ -11,6 +11,7 @@
       opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateX(-20%);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .contact.fade-in {

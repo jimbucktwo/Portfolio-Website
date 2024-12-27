@@ -1,4 +1,4 @@
-.about {
+.about, .courses, .experience {
   background-color: white;
   width: 95%;
   height: 90vh;
@@ -11,9 +11,15 @@
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: translateX(-20%);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-.about.fade-in {
+.courses, .experience {
+  margin-top: 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.about.fade-in, .courses.fade-in, .experience.fade-in {
   opacity: 1;
   transform: translateX(0%);
 }
@@ -25,39 +31,107 @@
   justify-items: start;
   align-items: center;
   align-self: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "header header header header header"
-    "p1 p1 p1 p1 p1"
-    "courses courses courses courses courses"
-    "p2 p2 p2 p2 p2"
-    "resume resume resume resume resume";
+    "jimmy jimmy . ."
+    "jimmy jimmy header header"
+    "jimmy jimmy p1 p1"
+    "jimmy jimmy . resume";
 }
 
 .about-section p {
-  color: rgb(102, 102, 102);
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .about-section h2 {
-  color: rgb(102, 102, 102);
   grid-area: header;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  font-size: 70px;
 }
 
 #about-1 {
   grid-area: p1;
+  margin: 0px;
+  align-self: start;
 }
 
-#courses {
-  grid-area: courses;
-  color: rgb(102, 102, 102);
+.courses-list {
+  list-style-type: circle;
+  width: 50%;
 }
 
-#about-2 {
-  grid-area: p2;
+.resume1{
+  display: flex;
+  color: rgb(231, 231, 231);
+  margin-left: 10px;
+  align-self: center;
+  font-size: 30px;
+  margin-top: 200px;
+  position: absolute;
+  margin-left: 1020px;
+}
+.jimmy {
+  grid-area: jimmy;
+  max-width: 90%;
+  border-radius: 20px;
 }
 
-.about-section a {
-  grid-area: resume;
-  color: rgb(102, 102, 102);
+.courses-section, .experience-section {
+  display: flex;
+  width: 70%;
+  height: 70%;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
 }
+
+.courses-section h2{
+  text-align: start;
+  width: 50%;
+  font-size: 100px;
+  font-weight: bold;
+  margin-right: 80px;
+}
+
+.courses-list li{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.experience-section h2{
+  width: 50%;
+  text-align: start;
+  margin-left: 0px;
+  font-size: 100px;
+}
+
+.experience-list {
+  list-style-type: none;
+  list-style-position: inside;
+  width: 50%;
+  text-align: right;
+  margin-right: 80px;
+}
+
+.experience-list li {
+  position: relative;
+  padding-right: 30px; /* Space for the bullet */
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.experience-list li::after {
+  content: '○'; /* Bullet character */
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+   /* Center the bullet */
+  transform: translateY(50%);
+  font-weight: bold;
+  
+}
+

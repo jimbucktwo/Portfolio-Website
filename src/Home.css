@@ -62,7 +62,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, backdrop-filter 0.5s ease;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
 }
 
 nav {
@@ -72,8 +74,30 @@ nav {
   align-items: center;
 }
 
+nav div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0px 10px;
+  border-radius: 10px;
+}
+nav div:hover{
+  display: flex;
+  background-color: rgb(231, 231, 231);
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+}
+
+nav div a:hover{
+  color: white;
+  transition: color 0.2s ease;
+}
+
 .header.scrolled {
   transform: translateY(-100%);
+  background-color: transparent;
+  backdrop-filter: blur(0px);
 }
 
 .header div a {
@@ -95,6 +119,7 @@ nav {
   justify-content: center;
   justify-self: center;
   border-radius: 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .home-contact {
@@ -242,7 +267,7 @@ nav {
   max-width: 50%;
   max-height: 50%;
   border-radius: 10px;
-  margin-right: 20px;
+  margin-right: 60px;
 }
 
 .bio p:nth-child(1) {
