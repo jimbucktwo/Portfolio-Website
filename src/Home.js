@@ -1,8 +1,6 @@
 import "./Home.css";
 import { useState, useEffect } from "react";
-import logo from "./logo192.png";
 import intro from "./images/intro.jpeg";
-import weather from "./images/weatherlogo.png";
 import {Link} from "react-router-dom";
 import flappy from "./images/flappy.png";
 import fridge from "./images/fridge.jpeg";
@@ -37,22 +35,22 @@ export function Header() {
       <div className="header">
         <nav>
         <div className="header-name">
-          <Link to="/home">
-            <p>Jimmy Tran</p>
+          <Link to="/home" onClick={() => window.scrollTo(0, 0)}>
+            <p>Home</p>
           </Link>
         </div>
         <div className="header-work">
-        <Link to="/work">
+        <Link to="/work" onClick={() => window.scrollTo(0, 0)}>
             <p>Work</p>
         </Link>
         </div>
         <div className="header-about">
-        <Link to="/about">
+        <Link to="/about" onClick={() => window.scrollTo(0, 0)}>
             <p>About</p>
           </Link>
         </div>
         <div className="header-contact">
-        <Link to="/contact">
+        <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
             <p>Contact</p>
           </Link>
         </div>
@@ -96,7 +94,7 @@ function Desc() {
         <p>Front-end Web Developer</p>
       </div>
       <div className="intro-img">
-        <img src={intro}></img>
+        <img src={intro} alt="intro"></img>
       </div>
     </div>
   );
@@ -139,7 +137,6 @@ function Intro() {
 
 function Grid() {
     const images = [flappy, fridge, holidays];
-    const desc = ["Flappy Bird", "Virtual IoT Device", "Holiday Tracker" ];
     const [currentImage, setCurrentImage] = useState(0);
 
     useEffect(() => {
@@ -182,14 +179,18 @@ function Grid() {
 
     return (
       <div className="project-outer">
-        <div className="projects-grid">
-        <div className="project">
-          <Link to="/work"><img src={images[currentImage]}></img></Link>
-        </div>
-      </div>
-      <div className="project disc">
+        <div className="project disc">
           <p>Projects</p>
         </div>
+        <div className="projects-grid">
+        
+        <div className="project">
+          <a href="https://github.com/jimbucktwo"
+              target="_blank"
+              rel="noreferrer"><img src={images[currentImage]} alt="current"></img></a>
+        </div>
+      </div>
+      
       </div>
     )
 }
@@ -236,32 +237,32 @@ export function Footer() {
             <a
               href="https://www.linkedin.com/in/jimmy-tran1023/"
               target="_blank"
-              className="transition"
+              className="transition" rel="noreferrer"
               >&#xeac9;</a>
           </li>
           <li>
             <a
               href="https://github.com/jimbucktwo"
               target="_blank"
-              className="transition"
+              className="transition" rel="noreferrer"
               >&#xeab0;</a>
           </li>
           <li>
             <a
               href="https://www.instagram.com/jimothytran/"
               target="_blank"
-              className="transition"
+              className="transition" rel="noreferrer"
               >&#xea92;</a>
           </li>
           <li>
             <a
               href="https://replit.com/@JimmyTran26"
               target="_blank"
-              className="transition"
+              className="transition" rel="noreferrer"
               >&#xeaa7;</a>
           </li>
         </ul>
-            <p>Jimmy Tran - Web Developer</p>
+            <p> Jimmy Tran - Web Developer &copy; 2024</p>
         </div>
     );
 

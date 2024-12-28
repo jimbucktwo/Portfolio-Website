@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1152240a.css",
+    "main.js": "/static/js/main.862dc713.js",
+    "static/media/jimmy.JPEG": "/static/media/jimmy.1576a3f2d698c9830cf6.JPEG",
+    "static/media/intro.jpeg": "/static/media/intro.7cf3649e14aa4bfa6178.jpeg",
+    "static/media/holidays.jpg": "/static/media/holidays.72e7df66e3e115c5237a.jpg",
+    "static/media/longbeach.jpg": "/static/media/longbeach.3787db533b520fc4b3cd.jpg",
+    "static/media/work.jpg": "/static/media/work.fc439d4a614606a5bd0f.jpg",
+    "static/media/schoolhouse.png": "/static/media/schoolhouse.18271293ceabfde6420b.png",
+    "static/media/Resume.pdf": "/static/media/Resume.6ad9831634300aeae719.pdf",
+    "static/media/icomoon.svg": "/static/media/icomoon.3af99ad47f29c89265f2.svg",
+    "static/media/icomoon.eot": "/static/media/icomoon.2bd5876b995eb717ebc8.eot",
+    "static/media/icomoon.woff": "/static/media/icomoon.aa56b05212088ee5df49.woff",
+    "static/media/icomoon.ttf": "/static/media/icomoon.12f82540c95ab9e9810d.ttf",
+    "index.html": "/index.html",
+    "main.1152240a.css.map": "/static/css/main.1152240a.css.map",
+    "main.862dc713.js.map": "/static/js/main.862dc713.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1152240a.css",
+    "static/js/main.862dc713.js"
+  ]
+}

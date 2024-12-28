@@ -40,7 +40,7 @@
   font-size: 16px;
   display: block;
   padding: 6px 8px;
-  background-color: #8a8a8a;
+  background-color: #000000;
   color: #fff;
   border-radius: 3px;
 }
@@ -62,13 +62,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.5s ease, backdrop-filter 0.5s ease;
+  transition: width 0.5s ease;
   backdrop-filter: blur(10px);
   border-radius: 10px;
 }
 
 nav {
-    width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,7 +79,7 @@ nav div {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  margin: 0px 10px;
+  margin: 0px 0px;
   border-radius: 10px;
 }
 nav div:hover{
@@ -95,10 +95,10 @@ nav div a:hover{
 }
 
 .header.scrolled {
-  transform: translateY(-100%);
   background-color: transparent;
-  backdrop-filter: blur(0px);
+  width: 25%;
 }
+
 
 .header div a {
   display: flex;
@@ -120,6 +120,7 @@ nav div a:hover{
   justify-self: center;
   border-radius: 20px;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  
 }
 
 .home-contact {
@@ -240,6 +241,7 @@ nav div a:hover{
 .project.disc {
   font-weight: bold;
   font-size: 100px;
+  margin-right: 80px;
 }
 .footer {
   display: flex;
@@ -249,7 +251,7 @@ nav div a:hover{
 }
 
 .footer p {
-  color: rgb(102, 102, 102);
+  color: rgb(0, 0, 0);
   margin-right: 84px;
 }
 

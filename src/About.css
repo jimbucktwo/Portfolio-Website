@@ -37,7 +37,7 @@
     "jimmy jimmy . ."
     "jimmy jimmy header header"
     "jimmy jimmy p1 p1"
-    "jimmy jimmy . resume";
+    "jimmy jimmy resume resume";
 }
 
 .about-section p {
@@ -64,15 +64,13 @@
 }
 
 .resume1{
+  grid-area: resume;
   display: flex;
   color: rgb(231, 231, 231);
-  margin-left: 10px;
-  align-self: center;
+  align-self: start;
   font-size: 30px;
-  margin-top: 200px;
-  position: absolute;
-  margin-left: 1020px;
 }
+
 .jimmy {
   grid-area: jimmy;
   max-width: 90%;

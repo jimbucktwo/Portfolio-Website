@@ -1,4 +1,4 @@
-.work, .instructor {
+.work, .instructor, .tutor{
   background-color: white;
   width: 95%;
   height: 90vh;
@@ -15,12 +15,12 @@
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-.work.fade-in, .instructor.fade-in {
+.work.fade-in, .instructor.fade-in, .tutor.fade-in {
   opacity: 1;
   transform: translateX(0%);
 }
 
-.instructor {
+.instructor, .tutor {
   margin-top: 50px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -54,7 +54,22 @@
   font-size: 80px;
 }
 
-.whizara-logo {
+.instructor a {
   width: 20%;
+}
+.whizara-logo {
+  width: 100%;
+  margin-left: 40px;
+}
+
+.tutor h2 {
+  font-size: 80px;
+}
+
+.tutor a {
+  width: 40%;
+}
+.schoolhouse {
+  width: 100%; 
   margin-left: 40px;
 }

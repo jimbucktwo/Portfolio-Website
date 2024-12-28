@@ -3,6 +3,7 @@
       width: 95%;
       height: 90vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       justify-self: center;
       border-radius: 20px;
@@ -17,4 +18,59 @@
 .contact.fade-in {
   opacity: 1;
   transform: translateX(0%);
+}
+
+.contact-section {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+  height: 60%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.contact-form label {
+  margin-top: 10px;
+  width: 100%;
+  color: #8a8a8a;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-section h2 {
+  font-size: 60px;
 }

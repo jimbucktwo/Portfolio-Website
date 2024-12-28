@@ -2,7 +2,6 @@ import "./About.css";
 import { Header, Footer } from "./Home";
 import { useEffect } from "react";
 import resume from "./Resume.pdf";
-import peanut from "./images/peanut.jpg";
 import jimmy from "./images/jimmy.JPEG";
 
 function Bio() {
@@ -42,6 +41,9 @@ function Bio() {
           Hi! I am currently enrolled at California State University, Long Beach
           and am in the midst of pursuing my Bachelors in Computer Science.
         </p>
+        <a href={resume} download="Resume (Jimmy Tran)" className="resume1">
+          Resume
+          </a>
       </div>
     </div>
   );
@@ -136,7 +138,6 @@ function Experience() {
         <li>React</li>
         <li>GitHub</li>
         <li>Android Studio</li>
-        <li>PostGres</li>
         <li>Visual Studio Code</li>
         <li>Google Cloud Platform</li>
       </ul> 
@@ -144,9 +145,7 @@ function Experience() {
       
       <h2>Experience</h2>
       </div>
-      <a href={resume} download="Resume (Jimmy Tran)" className="resume1">
-          Resume
-          </a>
+      
     </div>
   )
 }
