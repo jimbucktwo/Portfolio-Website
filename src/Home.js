@@ -137,7 +137,6 @@ function Intro() {
 
 function Grid() {
     const images = [flappy, fridge, holidays];
-    const [currentImage, setCurrentImage] = useState(0);
 
     /**useEffect(() => {
       
@@ -187,7 +186,7 @@ function Grid() {
         <div className="project">
           <a href="https://github.com/jimbucktwo"
               target="_blank"
-              rel="noreferrer"><img className="grid-img1" src={images[currentImage]} alt="current"></img>
+              rel="noreferrer"><img className="grid-img1" src={images[0]} alt="current"></img>
               <img className="grid-img2" src={images[1]} alt="current"></img>
               <img className="grid-img3" src={images[2]} alt="current"></img></a>
         </div>
