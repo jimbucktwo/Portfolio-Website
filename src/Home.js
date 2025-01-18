@@ -139,18 +139,18 @@ function Grid() {
     const images = [flappy, fridge, holidays];
     const [currentImage, setCurrentImage] = useState(0);
 
-    useEffect(() => {
+    /**useEffect(() => {
       
       const interval = setInterval(() => {
           setCurrentImage((prevIndex) => (prevIndex + 1) % images.length);
       }, 3000); // Change image every 3 seconds
 
       return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length]); **/
 
 
     useEffect(() => {
-        const introElement = document.querySelector(".projects-grid");
+        const introElement = document.querySelector(".project-outer");
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting) {
@@ -187,7 +187,9 @@ function Grid() {
         <div className="project">
           <a href="https://github.com/jimbucktwo"
               target="_blank"
-              rel="noreferrer"><img src={images[currentImage]} alt="current"></img></a>
+              rel="noreferrer"><img className="grid-img1" src={images[currentImage]} alt="current"></img>
+              <img className="grid-img2" src={images[1]} alt="current"></img>
+              <img className="grid-img3" src={images[2]} alt="current"></img></a>
         </div>
       </div>
       
@@ -271,6 +273,32 @@ export function Footer() {
 function Resume() {
   useEffect(() => {
     const introElement = document.querySelector(".resume");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          introElement.classList.add("fade-in");
+        } else {
+          introElement.classList.remove("fade-in");
+        }
+      },
+      {
+        threshold: 0.3, // Adjust this value as needed
+      }
+    );
+
+    if (introElement) {
+      observer.observe(introElement);
+    }
+
+    return () => {
+      if (introElement) {
+        observer.unobserve(introElement);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    const introElement = document.querySelector(".resume-desc");
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
