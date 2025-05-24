@@ -2,10 +2,9 @@ import "./Home.css";
 import { useState, useEffect } from "react";
 import intro from "./images/intro.jpeg";
 import {Link} from "react-router-dom";
-import flappy from "./images/flappy.png";
-import fridge from "./images/fridge.jpeg";
-import holidays from "./images/holidays.jpg";
 import school from "./images/longbeach.jpg";
+import powerplay from "./images/App-logo.png";
+import nurseai from "./images/nursailogo.jpg";
 
 export function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
@@ -91,7 +90,7 @@ function Desc() {
     <div className="intro-section">
       <div className="intro-desc">
         <p>Jimmy Tran</p>
-        <p>Front-end Web Developer</p>
+        <p>Full Stack Web Developer</p>
       </div>
       <div className="intro-img">
         <img src={intro} alt="intro"></img>
@@ -136,7 +135,6 @@ function Intro() {
 }
 
 function Grid() {
-    const images = [flappy, fridge, holidays];
 
     /**useEffect(() => {
       
@@ -146,7 +144,6 @@ function Grid() {
 
       return () => clearInterval(interval);
   }, [images.length]); **/
-
 
     useEffect(() => {
         const introElement = document.querySelector(".project-outer");
@@ -174,23 +171,20 @@ function Grid() {
         };
       }, []);
 
-      
-
     return (
       <div className="project-outer">
         <div className="project disc">
-          <p>Projects</p>
+          <p className="project-title">Projects</p>
+          <div className="project-item">
+            <img src={powerplay} alt="PowerPlay"></img>
+            <p className="project-description">A self-motivating physical therapy communication tool designed to streamline recovery</p>
+          </div>
+          <div className="project-item">
+            <p className="project-description">A virtual AI nurse designed to help diagnose and give information based on symptoms</p>
+            <img src={nurseai} alt="NursAI"></img>
+          </div>
         </div>
-        <div className="projects-grid">
         
-        <div className="project">
-          <a href="https://github.com/jimbucktwo"
-              target="_blank"
-              rel="noreferrer"><img className="grid-img1" src={images[0]} alt="current"></img>
-              <img className="grid-img2" src={images[1]} alt="current"></img>
-              <img className="grid-img3" src={images[2]} alt="current"></img></a>
-        </div>
-      </div>
       
       </div>
     )
@@ -263,7 +257,7 @@ export function Footer() {
               >&#xeaa7;</a>
           </li>
         </ul>
-            <p> Jimmy Tran - Web Developer &copy; 2024</p>
+            <p> Jimmy Tran - Web Developer &copy; 2025</p>
         </div>
     );
 
@@ -329,7 +323,7 @@ function Resume() {
         <img src={school} alt="California State University, Long Beach"></img>
         <div className="bio">
         <p>CSULB Undergrad</p>
-        <p>B.S. in Computer Science, GPA of 3.9 <Link to="/about" className="learn">(Learn More)</Link></p>
+        <p>B.S. in Computer Science, GPA: 3.9 <Link to="/about" className="learn">(Learn More)</Link></p>
         </div>
       </div>
     </div>

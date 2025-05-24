@@ -38,8 +38,7 @@ function Bio() {
         <img src={jimmy} alt="Jimmy" className="jimmy"/>
         <h2>Jimmy Tran</h2>
         <p id="about-1">
-          Hi! I am currently enrolled at California State University, Long Beach
-          and am in the midst of pursuing my Bachelors in Computer Science.
+        As a web developer, I am passionate about creating dynamic and user-friendly web applications. With a strong foundation in Computer Science, I have experience working with modern technologies such as MongoDB, React, and GitHub.
         </p>
         <a href={resume} download="Resume (Jimmy Tran)" className="resume1">
           Resume
@@ -80,7 +79,7 @@ function Courses() {
     <div className="courses">
       <div className="courses-section">
         
-      <h2>Past/Future Courses</h2>
+      <h2>Coursework</h2>
       
       <ul className="courses-list">
         <li>Artificial Intelligence</li>
@@ -137,13 +136,16 @@ function Experience() {
         <li>MongoDB</li>
         <li>React</li>
         <li>GitHub</li>
-        <li>Android Studio</li>
+        <li>React Native</li>
+        <li>Next.js</li>
+        <li>TailwindCSS</li>
+        <li>AWS</li>
         <li>Visual Studio Code</li>
         <li>Google Cloud Platform</li>
       </ul> 
           
       
-      <h2>Experience</h2>
+      <h2>Tech Tools</h2>
       </div>
       
     </div>

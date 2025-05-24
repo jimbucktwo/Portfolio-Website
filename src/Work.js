@@ -4,7 +4,7 @@ import {useEffect} from 'react';
 import work from "./images/work.jpg";
 import whizara_logo from "./images/whizara_logo.jpg";
 import schoolhouse from "./images/schoolhouse.png";
-
+import business from "./images/business.jpg";
 
 function Workpage() {
   useEffect(() => {
@@ -113,11 +113,51 @@ function Tutor() {
     </div>
   )
 }
+
+function Internship() {
+  useEffect(() => {
+    const introElement = document.querySelector(".internship");
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          introElement.classList.add("fade-in");
+        } else {
+          introElement.classList.remove("fade-in");
+        }
+      },
+      {
+        threshold: 0.3, // Adjust this value as needed
+      }
+    );
+
+    if (introElement) {
+      observer.observe(introElement);
+    }
+
+    return () => {
+      if (introElement) {
+        observer.unobserve(introElement);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="internship">
+      <div className='internship-section'>
+      <h2>Software Engineer Intern at</h2>
+      <a href="https://www.businesswire.com/"><img src={business} alt="Business Wire" className="business"/></a>
+    </div>
+    </div>
+  );
+}
+
+
 export default function Work() {
     return (
         <div>
         <Header/>
         <Workpage/>
+        <Internship/>
         <Instructor/>
         <Tutor />
         <Footer/>
