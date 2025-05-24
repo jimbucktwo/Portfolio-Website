@@ -1,7 +1,7 @@
 import "./About.css";
 import { Header, Footer } from "./Home";
 import { useEffect } from "react";
-import resume from "./Resume.pdf";
+import resume from "./Resume-JimmyTran.pdf";
 import jimmy from "./images/jimmy.JPEG";
 
 function Bio() {
